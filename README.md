@@ -34,7 +34,7 @@ Conform de richtlijnen voor reproduceerbare statistische productiestraten zijn *
   - Validatie & Methodologie: De functie controleert eerst of zowel het doelkwartaal ($t$) als het voorgaande kwartaal ($t-1$) exact 3 onderliggende maandcijfers bevatten. Indien een kwartaal incompleet is, stopt de functie direct met een duidelijke foutmelding (fail-fast). Vervolgens wordt per kwartaal het rekenkundig gemiddelde van de drie maandindices berekend ($\bar{P}_t$) en wordt de procentuele kwartaalmutatie berekend:
   
   $$\bar{P}_t = \frac{P_{t,1} + P_{t,2} + P_{t,3}}{3}$$ 
-  $${\text{Kwartaalmutatie}}_{t}\left(\%\right)=\left(\frac{{\bar{P}}_{t}}{{\bar{P}}_{t-1}}-1\right)\times 100$$
+  $$\text{Kwartaalmutatie}_t = \left( \frac{\bar{P}_t}{\bar{P}_{t-1}} - 1 \right) \times 100$$
 
 3. Output (R/03_output.R) – generate_cpi_plots() & save_to_sqlite():
   - Visualisaties (generate_cpi_plots): Genereert twee publicatieklare grafieken met ggplot2 en slaat deze op in output/figures/:
